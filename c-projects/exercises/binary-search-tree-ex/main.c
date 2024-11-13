@@ -1,3 +1,4 @@
+#include <limits.h>
 #include <stdio.h>
 #include "tree.h"
 
@@ -12,7 +13,7 @@ int main() {
     int min = findmin(root);
     int max = findmax(root);
     printf("Min: %d, Max: %d\n", min, max);
-    int checker = checkBST(root, min, max);
+    int checker = checkBST(root, INT_MIN, INT_MAX);
     if(checker) {
         printf("Yessir\n");
     } else {

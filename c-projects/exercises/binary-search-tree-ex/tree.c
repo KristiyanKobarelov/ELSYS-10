@@ -38,7 +38,7 @@ int findmin(Node* root) {
         return root->val;
     }
 
-    else return findmin(root->left);
+    else findmin(root->left);
 }
 
 int findmax(Node* root) {
@@ -47,11 +47,11 @@ int findmax(Node* root) {
         exit(1);
     }
 
-    while(1) {
-        if(root->right == NULL) {
-            return root->val;
-        }
+    if(root->right == NULL) {
+        return root->val;
     }
+
+    else findmax(root->right);
 }
 
 int checkBST(Node * root, int lower, int upper) {
@@ -60,7 +60,7 @@ int checkBST(Node * root, int lower, int upper) {
     
     if(root->val <= lower || root->val >= upper) return 0;
 
-    else return checkBST(root->left, lower, upper) && checkBST(root->right, lower, upper);
+    else return checkBST(root->left, lower, root->val) && checkBST(root->right, root->val, upper);
 }
 
 // O(n)
