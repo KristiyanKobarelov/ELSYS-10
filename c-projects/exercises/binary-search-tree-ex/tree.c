@@ -63,6 +63,17 @@ int checkBST(Node * root, int lower, int upper) {
     else return checkBST(root->left, lower, root->val) && checkBST(root->right, root->val, upper);
 }
 
+void delValue(Node * root, int value) {
+    if(value > root->val) {
+        if(root->right != NULL) {
+            if(root->val == value) {
+                
+            }
+        }
+    }
+
+}
+
 // O(n)
 void printTree(Node* root) {
     if (root == NULL) {

@@ -18,6 +18,7 @@ int main() {
         printf("Yessir\n");
     } else {
         printf("Nuh uh\n");
+        exit(-1);
     }
 
     

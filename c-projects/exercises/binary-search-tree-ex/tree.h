@@ -14,5 +14,6 @@ void printTree(Node *);
 int findmin(Node *);
 int findmax(Node *);
 int checkBST(Node *, int lower, int upper);
+void delValue(Node *, int value);
 
 #endif
