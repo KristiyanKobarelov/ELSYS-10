@@ -17,6 +17,8 @@ int main() {
     printTree(root);
     printf("\n");
     printTreeInorder(root);
+    int bh = GetBH(root);
+    printf("Black Height: %d\n", bh);
 
     return 0;
 }
